@@ -1,0 +1,76 @@
+{
+  "name": "shiftavenue-vs-code-sigin-ext",
+  "displayName": "shiftavenue-vs-code-sigin-ext",
+  "description": "Extension for signing PowerShell scripts with a code signing certificate",
+  "version": "0.0.1",
+  "publisher": "shiftavenue_GmbH",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "author": {
+        "name": "T0RST3N"
+    },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "shiftavenue-ps-signer.signScript",
+        "title": "shiftavenue: PS Skript signieren",
+        "icon": {
+                  "light": "ico/shiftavenue-PS-Signer-dark.svg",
+                  "dark": "ico/shiftavenue-PS-Signer-light.svg"
+                }
+      }
+    ],
+    "menus": {
+        "editor/title": [
+            {
+                "when": "editorLangId == powershell",
+                "command": "shiftavenue-ps-signer.signScript",
+                "group": "navigation",
+                "icon": "ico/viber.svg"
+                
+                
+            }
+        ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "shiftavenue PS Signer Konfiguration",
+      "properties": {
+        "shiftavenue-ps-signer.certSubjectName": {
+          "type": "string",
+          "default": "",
+          "description": "Der 'Subject'-Name (oder ein Teil davon) des installierten Code-Signing-Zertifikats."
+        },
+        "shiftavenue-ps-signer.timestampServer": {
+          "type": "string",
+          "default": "http://timestamp.digicert.com",
+          "description": "URL des Zeitstempel-Servers (damit die Signatur auch nach Ablauf des Zertifikats gültig bleibt)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.107.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.46.3",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
