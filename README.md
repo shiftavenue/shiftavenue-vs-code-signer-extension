@@ -1,7 +1,7 @@
 # shiftavenue GmbH PowerShell Script Signer
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/shiftavenue)](https://marketplace.visualstudio.com/items?itemName=shiftavenue-vs-code-sigin-ext)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/ms-vscode.PowerShell)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
+[![Version](https://img.shields.io/visual-studio-marketplace/v/shiftavenue)](https://marketplace.visualstudio.com/items?itemName=shiftavenue-vs-code-signer-extension)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/shiftavenue)](https://marketplace.visualstudio.com/items?itemName=shiftavenue-vs-code-signer-extension)
 
 
 
