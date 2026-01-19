@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "shiftavenue-vs-code-sigin-ext" extension will be documented in this file.
+All notable changes to the "shiftavenue GmbH PowerShell Script Signer" extension.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 1.0.0
 
-## [Unreleased]
+### Added
 
-- Initial release
+- Initial release of shiftavenue PowerShell Script Signer

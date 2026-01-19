@@ -1,71 +1,49 @@
-# shiftavenue-vs-code-sigin-ext README
+# shiftavenue GmbH PowerShell Script Signer
 
-This is the README for your extension "shiftavenue-vs-code-sigin-ext". After writing up a brief description, we recommend including the following sections.
+[![Version](https://img.shields.io/visual-studio-marketplace/v/shiftavenue)](https://marketplace.visualstudio.com/items?itemName=shiftavenue-vs-code-sigin-ext)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/ms-vscode.PowerShell)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
+
+
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Sign PowerShell files that currently open in the vs code editorwindow with a codesigning certificate. The certificate must be installed in the personal certificate store and must be a codesigning certificate.
 
-For example if there is an image subfolder under your extension project workspace:
+After installation, this icon appears in the editor toolbar of PowerShell Files.
 
-\!\[feature X\]\(images/feature-x.png\)
+![sign](images/sign_icon.png)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+You can also execute the signing in the command window CTRL + SHIFT + P
+
+![sign](images/sign_command.png)
+
+After successful signing with the shiftavenue PowerShell Signer, the message appears and the PowerShell script has been signed.
+![sign](images/sign_successfully.png)
+>The PowerShell script is saved automatically.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+* Installed PowerShell Extension 
+* Installed personal code signing certificate
+* Open PowerShell script file (.ps1)
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* `shiftavenue-ps-signer.certSubjectName`: The 'Subject' name (or part of it) of the installed code signing certificate.
+* `shiftavenue-ps-signer.timestampServer`: URL of the timestamp server (so that the signature remains valid even after the certificate expires).
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+nn.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+Please use Github-Issues for problems, questions, or requests
 
 ### 1.0.0
 
-Initial release of ...
+- Initial release of shiftavenue GmbH PowerShell Script Signer
 
-### 1.0.1
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

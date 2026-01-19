@@ -2,8 +2,9 @@
   "name": "shiftavenue-vs-code-sigin-ext",
   "displayName": "shiftavenue-vs-code-sigin-ext",
   "description": "Extension for signing PowerShell scripts with a code signing certificate",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "shiftavenue_GmbH",
+  "icon": "images/logo.ico",
   "engines": {
     "vscode": "^1.107.0"
   },
@@ -19,10 +20,10 @@
     "commands": [
       {
         "command": "shiftavenue-ps-signer.signScript",
-        "title": "shiftavenue: PS Skript signieren",
+        "title": "shiftavenue: Sign PS script",
         "icon": {
-                  "light": "ico/shiftavenue-PS-Signer-dark.svg",
-                  "dark": "ico/shiftavenue-PS-Signer-light.svg"
+                  "light": "images/shiftavenue-PS-Signer-dark.svg",
+                  "dark": "images/shiftavenue-PS-Signer-light.svg"
                 }
       }
     ],
@@ -31,26 +32,23 @@
             {
                 "when": "editorLangId == powershell",
                 "command": "shiftavenue-ps-signer.signScript",
-                "group": "navigation",
-                "icon": "ico/viber.svg"
-                
-                
+                "group": "navigation"               
             }
         ]
     },
     "configuration": {
       "type": "object",
-      "title": "shiftavenue PS Signer Konfiguration",
+      "title": "shiftavenue PS Signer configuration",
       "properties": {
         "shiftavenue-ps-signer.certSubjectName": {
           "type": "string",
           "default": "",
-          "description": "Der 'Subject'-Name (oder ein Teil davon) des installierten Code-Signing-Zertifikats."
+          "description": "The 'Subject' name (or part of it) of the installed code signing certificate."
         },
         "shiftavenue-ps-signer.timestampServer": {
           "type": "string",
           "default": "http://timestamp.digicert.com",
-          "description": "URL des Zeitstempel-Servers (damit die Signatur auch nach Ablauf des Zertifikats gültig bleibt)."
+          "description": "URL of the timestamp server (so that the signature remains valid even after the certificate expires)."
         }
       }
     }

@@ -48,12 +48,12 @@ function activate(context) {
             vscode.window.showErrorMessage('Dies ist keine PowerShell-Datei.');
             return;
         }
-        // 1. Datei speichern, falls Änderungen vorhanden sind
+        // Save file if changes have been made
         if (editor.document.isDirty) {
             await editor.document.save();
         }
         const filePath = editor.document.fileName;
-        // 2. Konfiguration laden
+        // Load configuration
         const config = vscode.workspace.getConfiguration('shiftavenue-ps-signer');
         const certName = config.get('certSubjectName');
         const timestampUrl = config.get('timestampServer');
@@ -61,38 +61,36 @@ function activate(context) {
             vscode.window.showErrorMessage('Bitte konfiguriere "ps-signer.certSubjectName" in den Einstellungen.');
             return;
         }
-        // 3. PowerShell Befehl konstruieren
-        // Wir suchen das Zertifikat im "Current User -> My" Store, das für Code Signing geeignet ist.
+        // Construct PowerShell command
+        // We search for the certificate in the “Current User -> My” store that is suitable for code signing.
         const psCommand = `
-			$cert = Get-ChildItem -Path Cert:\\CurrentUser\\My -CodeSigningCert | Where-Object { $_.Subject -like "*${certName}*" } | Select-Object -First 1;
-			if ($null -eq $cert) {
-				Write-Error "Kein Zertifikat gefunden, das '${certName}' entspricht.";
-				exit 1;
+			\$cert = Get-ChildItem -Path Cert:\\CurrentUser\\My -CodeSigningCert | Where-Object { \$_.Subject -like '*${certName}*' } | Select-Object -First 1;
+			if (-not \$cert) {
+				return \\"No certificate found matching '${certName}'.\\";
 			}
-			$result=Set-AuthenticodeSignature -FilePath "${filePath}" -Certificate $cert -TimestampServer "${timestampUrl}";
-			if ($result.Status -eq "Valid") {
-				exit 0
+			\$result = Set-AuthenticodeSignature -FilePath '${filePath}' -Certificate \$cert -TimestampServer '${timestampUrl}';
+			if (\$result.Status -eq 'Valid') {
+				exit \$result.Status;
 			} else {
-				exit $($result.Status)
+				exit 0;
 
 			}
-
-		`;
-        // Statusmeldung anzeigen
-        vscode.window.setStatusBarMessage('$(sync~spin) Signiere Skript...', 2000);
-        // 4. Prozess ausführen
+		`.replace(/\n/g, ' '); // Remove line breaks for exec
+        // Display status message
+        vscode.window.setStatusBarMessage('$(sync~spin) Sign script...', 2000);
+        // Run PowerShell process
         cp.exec(`powershell -NoProfile -ExecutionPolicy Bypass -Command "${psCommand}"`, (err, stdout, stderr) => {
             if (err) {
-                vscode.window.showErrorMessage(`Fehler beim Signieren: ${stderr || err.message}`);
+                vscode.window.showErrorMessage(`Error during signing: ${err}`);
                 console.error(err);
                 return;
             }
-            // Prüfen ob PowerShell einen Fehler in den Stream geschrieben hat
-            if (stderr) {
-                vscode.window.showErrorMessage(`PowerShell Fehler: ${stderr}`);
+            // Check whether PowerShell has written an error to the stream
+            if (stderr || stdout) {
+                vscode.window.showErrorMessage(`Error: ${stderr} ${stdout}`);
             }
             else {
-                vscode.window.showInformationMessage(`Erfolgreich signiert: ${certName}`);
+                vscode.window.showInformationMessage(`Successfully signed with: ${certName}`);
             }
         });
     });
