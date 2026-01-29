@@ -2,11 +2,18 @@
 
 All notable changes to the "shiftavenue GmbH PowerShell Script Signer" extension.
 
-## 1.0.0
+## 1.0.4
 
-### Added
+### Change
 
-- Initial release of shiftavenue PowerShell Script Signer
+- extensions.ts -missing translation corrected
+- package.json -version number adjusted for antigravity
+
+## 1.0.3
+
+### Change
+
+- Readme.md housekeeping
 
 ## 1.0.2
 
@@ -14,8 +21,12 @@ All notable changes to the "shiftavenue GmbH PowerShell Script Signer" extension
 
 - Added PNG Logo
 
-## 1.0.3
+## 1.0.0
 
-### Change
+### Added
 
-- Readme.md housekeeping
+- Initial release of shiftavenue PowerShell Script Signer
+
+
+
+

@@ -7,12 +7,12 @@ export function activate(context: vscode.ExtensionContext) {
 
 		const editor = vscode.window.activeTextEditor;
 		if (!editor) {
-			vscode.window.showErrorMessage('Kein Editor aktiv.');
+			vscode.window.showErrorMessage('No editor active.');
 			return;
 		}
 
 		if (editor.document.languageId !== 'powershell') {
-			vscode.window.showErrorMessage('Dies ist keine PowerShell-Datei.');
+			vscode.window.showErrorMessage('This is not a PowerShell file.');
 			return;
 		}
 		// Save file if changes have been made
@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
 		const timestampUrl = config.get<string>('timestampServer');
 
 		if (!certName) {
-			vscode.window.showErrorMessage('Bitte konfiguriere "ps-signer.certSubjectName" in den Einstellungen.');
+			vscode.window.showErrorMessage('Please configure "ps-signer.certSubjectName" in the preferences/settings.');
 			return;
 		}
 		// Construct PowerShell command

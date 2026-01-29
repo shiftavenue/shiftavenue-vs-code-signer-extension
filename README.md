@@ -1,11 +1,12 @@
 # shiftavenue GmbH PowerShell Script Signer
 
-[![Version](https://img.shields.io/vscode-marketplace/v/shiftavenue.shiftavenue-vs-code-sigin-ext)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
-[![Installs](https://img.shields.io/vscode-marketplace/i/shiftavenue.shiftavenue-vs-code-sigin-ext)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
+[![vsm-version](https://img.shields.io/vscode-marketplace/v/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
+[![vsm-downloads](https://img.shields.io/visual-studio-marketplace/d/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=downloads&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
+[![vsm-installs](https://img.shields.io/visual-studio-marketplace/i/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=installs&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
+[![vsm-rating](https://img.shields.io/vscode-marketplace/r/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=rating&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
+[![vsm-stars](https://img.shields.io/vscode-marketplace/stars/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=stars&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
 
-
-
-## Features
+# Features
 
 Sign PowerShell files that currently open in the vs code editorwindow with a codesigning certificate. The certificate must be installed in the personal certificate store and must be a codesigning certificate.
 
@@ -21,29 +22,39 @@ After successful signing with the shiftavenue PowerShell Signer, the message app
 ![sign](images/sign_successfully.png)
 >The PowerShell script is saved automatically.
 
-## Requirements
+# Requirements
 
 * Installed PowerShell Extension 
 * Installed personal code signing certificate
 * Open PowerShell script file (.ps1)
 
-## Extension Settings
+# Extension Settings
 
 This extension contributes the following settings:
 
 * `shiftavenue-ps-signer.certSubjectName`: The 'Subject' name (or part of it) of the installed code signing certificate.
 * `shiftavenue-ps-signer.timestampServer`: URL of the timestamp server (so that the signature remains valid even after the certificate expires).
 
-## Known Issues
+# Known Issues
 
 nn.
 
-## Release Notes
+# Release Notes
 
-Please use Github-Issues for problems, questions, or requests
+Please use Github-Issues for problems, questions, or requests.
 
-### 1.0.0
-
+## 1.0.4
+### Change
+- extensions.ts -missing translation corrected
+- package.json -version number adjusted for antigravity
+## 1.0.3
+### Change
+- Readme.md housekeeping
+## 1.0.2
+### Add
+- Added PNG Logo
+## 1.0.0
 - Initial release of shiftavenue GmbH PowerShell Script Signer
+
 
 
