@@ -3,7 +3,7 @@
   "displayName": "shiftavenue-vs-code-sigin-ext",
   "description": "Extension for signing PowerShell scripts with a code signing certificate",
   "version": "1.0.0",
-  "publisher": "",
+  "publisher": "shiftavenue",
   "repository": "https://github.com/shiftavenue/shiftavenue-vs-code-signer-extension",
   "icon": "images/logo.ico",
   "engines": {
