@@ -13,3 +13,9 @@ All notable changes to the "shiftavenue GmbH PowerShell Script Signer" extension
 ### Add
 
 - Added PNG Logo
+
+## 1.0.3
+
+### Change
+
+- Readme.md housekeeping
