@@ -26,7 +26,7 @@ After successful signing with the shiftavenue PowerShell Signer, the message app
 
 * Installed PowerShell Extension 
 * Installed personal code signing certificate
-* Open PowerShell script file (.ps1)
+* Opened PowerShell script file (.ps1)
 
 # Extension Settings
 
