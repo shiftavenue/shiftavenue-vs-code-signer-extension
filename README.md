@@ -1,6 +1,6 @@
 # shiftavenue GmbH PowerShell Script Signer
 
-[![vsm-version](https://img.shields.io/vscode-marketplace/v/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
+[![vsm-version](https://img.shields.io/visual-studio-marketplace/v/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
 [![vsm-downloads](https://img.shields.io/visual-studio-marketplace/d/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=downloads&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
 [![vsm-installs](https://img.shields.io/visual-studio-marketplace/i/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=installs&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
 [![vsm-rating](https://img.shields.io/vscode-marketplace/r/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=rating&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
@@ -43,7 +43,7 @@ nn.
 
 Please use Github-Issues for problems, questions, or requests.
 
-## 1.0.4
+## 1.0.5
 ### Change
 - extensions.ts -missing translation corrected
 - package.json -version number adjusted for antigravity

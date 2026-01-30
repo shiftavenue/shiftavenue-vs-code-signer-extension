@@ -2,7 +2,7 @@
 
 All notable changes to the "shiftavenue GmbH PowerShell Script Signer" extension.
 
-## 1.0.4
+## 1.0.5
 
 ### Change
 

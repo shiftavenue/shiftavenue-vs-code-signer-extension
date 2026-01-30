@@ -2,7 +2,7 @@
   "name": "shiftavenue-vs-code-sigin-ext",
   "displayName": "shiftavenue VSCode sigin extension",
   "description": "Extension for signing PowerShell scripts with a code signing certificate",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publisher": "shiftavenue",
   "repository": "https://github.com/shiftavenue/shiftavenue-vs-code-signer-extension",
   "icon": "images/shiftavenue.png",
@@ -63,7 +63,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.107.0",
+    "@types/vscode": "^1.104.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
     "typescript-eslint": "^8.46.3",
