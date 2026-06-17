@@ -1,11 +1,5 @@
 # shiftavenue GmbH PowerShell Script Signer
 
-[![vsm-version](https://img.shields.io/visual-studio-marketplace/v/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
-[![vsm-downloads](https://img.shields.io/visual-studio-marketplace/d/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=downloads&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
-[![vsm-installs](https://img.shields.io/visual-studio-marketplace/i/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=installs&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
-[![vsm-rating](https://img.shields.io/vscode-marketplace/r/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=rating&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
-[![vsm-stars](https://img.shields.io/vscode-marketplace/stars/shiftavenue.shiftavenue-vs-code-sigin-ext?style=flat-square&label=stars&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=shiftavenue.shiftavenue-vs-code-sigin-ext)
-
 # Features
 
 Sign PowerShell files that currently open in the vs code editorwindow with a codesigning certificate. The certificate must be installed in the personal certificate store and must be a codesigning certificate.
