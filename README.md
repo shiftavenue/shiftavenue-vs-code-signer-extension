@@ -37,6 +37,9 @@ nn.
 
 Please use Github-Issues for problems, questions, or requests.
 
+## 1.0.6
+### Change
+- Update somes typos
 ## 1.0.5
 ### Change
 - extensions.ts -missing translation corrected
